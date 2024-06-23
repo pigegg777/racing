@@ -1,8 +1,10 @@
 import sys
-class Set_Time:
+
+
+class SetTime:
     def set_time(self):
         try:
-            print("시간을 입력하세요")
+            print("횟수를 입력하세요")
             time = int(input())
             return time
         except:
