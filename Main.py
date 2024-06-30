@@ -1,8 +1,17 @@
+from SetCarNames import SetCarNames
+from SetScoreboard import SetScoreboard
+from SetTime import SetTime
 from MainRace import MainRace
-from Race_Finish import Race_Finish
+from RaceFinish import RaceFinish
 
-main_race = MainRace()
-race_finish = Race_Finish()
+SC = SetCarNames()
+ST = SetTime()
+SB = SetScoreboard()
+MR = MainRace()
+RF = RaceFinish()
 
-main_race.race_start()
-race_finish.finish_race()
+car_names = SC.set_car_names()
+time = ST.set_time()
+score_board = SB.set_scoreboard(car_names)
+final_scoreboard = MR.start(score_board, time)
+RF.finish_race(final_scoreboard)

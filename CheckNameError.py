@@ -1,12 +1,6 @@
-from SetCarNames import SetCarNames
-
-
 class CheckNameError:
-    set_car_names = SetCarNames()
-
-    def check_names(self):
+    def check_names(self, car_names):
         try:
-            car_names = self.set_car_names.car_names()
             for name in car_names:
                 name = name.strip(" ")
                 if len(name) > 5 or len(name) < 0:
